@@ -1,14 +1,18 @@
 using System.Data.Entity;
 using System.Data.SqlClient;
+using System.DirectoryServices.ActiveDirectory;
 
 namespace _06182024
 {
     public partial class Form1 : Form
     {
-        SqlConnection connection = new SqlConnection("server=adminsystem; database=mydatabase; integrated security=true");
+        SqlConnection connection = new SqlConnection("server=192.168.1.184; database=mydatabase; integrated security=true");
 
         Form2 form2 = new Form2();
         Form3 form3 = new Form3();
+        Form4 form4 = new Form4();
+        Form5 form5 = new Form5();
+        Form6 form6 = new Form6();
 
         Dictionary<string, Button> buttonMap = new Dictionary<string, Button>();
         public Form1()
@@ -51,6 +55,8 @@ namespace _06182024
             btnc14.Click += new EventHandler(btnSelection);
             btnc15.Click += new EventHandler(btnSelection);
             btnc16.Click += new EventHandler(btnSelection);
+            btnc1.MouseLeave += new EventHandler(panelLeave);
+            btnc1.MouseEnter += new EventHandler(panelEnter);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -82,11 +88,14 @@ namespace _06182024
                         Button btn = buttonMap[codeID];
                         if (isbusy == 1)
                         {
-                            btn.BackColor = SystemColors.MenuHighlight;
+                            btn.FlatAppearance.BorderSize = 1;
+                            btn.BackColor = Color.Red;
+                            btn.ForeColor = Color.White;
                         }
                         else if (isbusy == 0)
                         {
-                            btn.BackColor = SystemColors.ScrollBar;
+                            btn.FlatAppearance.BorderSize = 1;
+                            btn.BackColor = Color.White;
                         }
                     }
                 }
@@ -102,37 +111,47 @@ namespace _06182024
 
         private void btnassign_Click(object sender, EventArgs e)
         {
-            TextBox[] textBoxes = { txtfisrtname/*, txtlastname, txtdocument, txtemail*/ };
-
-            foreach (TextBox textBox in textBoxes)
+            if (btnassign.Tag == null) 
             {
-                if (string.IsNullOrEmpty(textBox.Text))
-                {
-                    txtClear(sender, e);
-                    MessageBox.Show("Please fill alls fields");
-                    
-                }
-                else
-                {
-                    connection.Open();
+                txtClear(sender, e);
+                form5.Show();
+            }
+            else 
+            {
+                TextBox[] textBoxes = { txtfisrtname, txtlastname, txtdocument, txtemail };
 
-                    try
-                    {
-                        string code = ("update airplane set isbusy = 1, firstname='" + txtfisrtname.Text + "', lastname='" + txtlastname.Text + "', documment='" + txtdocument.Text + "', email='" + txtemail.Text + "' where code = '" + btnassign.Tag + "'");
-                        SqlCommand command = new SqlCommand(code, connection);
-                        command.ExecuteNonQuery();
-                        txtClear(sender, e);
-                        form2.Show();
-                    }
-                    catch (Exception ex)
+                foreach (TextBox textBox in textBoxes)
+                {
+                    if (string.IsNullOrEmpty(textBox.Text))
                     {
                         txtClear(sender, e);
-                        form3.Show();
-                    }
+                        form5.Show();
 
-                    connection.Close();
+                    }
+                    else
+                    {
+                        connection.Open();
+
+                        try
+                        {
+                            string code = ("update airplane set isbusy = 1, firstname='" + txtfisrtname.Text + "', lastname='" + txtlastname.Text + "', documment='" + txtdocument.Text + "', email='" + txtemail.Text + "' where code = '" + btnassign.Tag + "'");
+                            SqlCommand command = new SqlCommand(code, connection);
+                            command.ExecuteNonQuery();
+                            txtClear(sender, e);
+                            form6.Show();
+                        }
+                        catch (Exception ex)
+                        {
+                            txtClear(sender, e);
+                            form3.Show();
+                        }
+
+                        connection.Close();
+                    }
                 }
             }
+
+            
 
         }
 
@@ -145,7 +164,7 @@ namespace _06182024
                 if (!string.IsNullOrEmpty(textBox.Text))
                 {
                     txtClear(sender, e);
-                    MessageBox.Show("Please fill alls fields");
+                    form5.Show();
                 }
                 else
                 {
@@ -157,7 +176,7 @@ namespace _06182024
                         SqlCommand command = new SqlCommand(code, connection);
                         command.ExecuteNonQuery();
                         txtClear(sender, e);
-                        form2.Show();
+                        form6.Show();
                     }
                     catch (Exception ex)
                     {
@@ -184,11 +203,20 @@ namespace _06182024
 
             if (clickedButton != null)
             {
-                clickedButton.FlatAppearance.BorderSize = 3;
-                clickedButton.FlatAppearance.BorderColor = Color.Yellow;
+
+
             }
         }
 
+        private void panelLeave(object sender, EventArgs e)
+        {
+            pnlinfo.Visible = true;
+            pnlinfo.Location = new Point(35, 95);
+        }
+        private void panelEnter(object sender, EventArgs e)
+        {
+            pnlinfo.Visible = false;
+        }
         private void btnc1_Click(object sender, EventArgs e)
         {
             btnassign.Tag = "co01";
@@ -322,12 +350,17 @@ namespace _06182024
             btnfree.Tag = "co16";
         }
 
-        private void txtClear(object sender, EventArgs e) 
+        private void txtClear(object sender, EventArgs e)
         {
             txtfisrtname.Clear();
             txtlastname.Clear();
             txtdocument.Clear();
             txtemail.Clear();
+        }
+
+        private void btndemo_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Button demo");
         }
     }
 }
