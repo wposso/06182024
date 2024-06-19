@@ -173,6 +173,7 @@
             // 
             txtfisrtname.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtfisrtname.Location = new Point(187, 411);
+            txtfisrtname.MaxLength = 20;
             txtfisrtname.Name = "txtfisrtname";
             txtfisrtname.Size = new Size(236, 34);
             txtfisrtname.TabIndex = 8;
@@ -190,9 +191,9 @@
             // btnassign
             // 
             btnassign.Cursor = Cursors.Hand;
-            btnassign.Location = new Point(87, 703);
+            btnassign.Location = new Point(63, 705);
             btnassign.Name = "btnassign";
-            btnassign.Size = new Size(204, 41);
+            btnassign.Size = new Size(220, 41);
             btnassign.TabIndex = 10;
             btnassign.Text = "Assign";
             btnassign.UseVisualStyleBackColor = true;
@@ -201,9 +202,9 @@
             // btnfree
             // 
             btnfree.Cursor = Cursors.Hand;
-            btnfree.Location = new Point(312, 703);
+            btnfree.Location = new Point(329, 705);
             btnfree.Name = "btnfree";
-            btnfree.Size = new Size(204, 41);
+            btnfree.Size = new Size(224, 41);
             btnfree.TabIndex = 11;
             btnfree.Text = "Free";
             btnfree.UseVisualStyleBackColor = true;
@@ -213,6 +214,7 @@
             // 
             txtlastname.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtlastname.Location = new Point(187, 471);
+            txtlastname.MaxLength = 20;
             txtlastname.Name = "txtlastname";
             txtlastname.Size = new Size(236, 34);
             txtlastname.TabIndex = 12;
@@ -241,6 +243,7 @@
             // 
             txtdocument.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtdocument.Location = new Point(187, 531);
+            txtdocument.MaxLength = 10;
             txtdocument.Name = "txtdocument";
             txtdocument.Size = new Size(236, 34);
             txtdocument.TabIndex = 14;
@@ -259,6 +262,7 @@
             // 
             txtemail.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtemail.Location = new Point(187, 592);
+            txtemail.MaxLength = 40;
             txtemail.Name = "txtemail";
             txtemail.Size = new Size(236, 34);
             txtemail.TabIndex = 16;
@@ -424,6 +428,7 @@
             // 
             // btnc9
             // 
+            btnc9.BackColor = SystemColors.Control;
             btnc9.FlatAppearance.BorderColor = Color.Black;
             btnc9.FlatStyle = FlatStyle.Flat;
             btnc9.Font = new Font("Segoe UI Semibold", 8F, FontStyle.Bold);
@@ -432,7 +437,7 @@
             btnc9.Size = new Size(56, 49);
             btnc9.TabIndex = 19;
             btnc9.Text = "CO09";
-            btnc9.UseVisualStyleBackColor = true;
+            btnc9.UseVisualStyleBackColor = false;
             btnc9.Click += btnc9_Click;
             // 
             // Form1

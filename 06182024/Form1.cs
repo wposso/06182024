@@ -5,7 +5,10 @@ namespace _06182024
 {
     public partial class Form1 : Form
     {
-        SqlConnection connection = new SqlConnection("server=192.168.1.184; database=mydatabase; integrated security=true");
+        SqlConnection connection = new SqlConnection("server=adminsystem; database=mydatabase; integrated security=true");
+
+        Form2 form2 = new Form2();
+        Form3 form3 = new Form3();
 
         Dictionary<string, Button> buttonMap = new Dictionary<string, Button>();
         public Form1()
@@ -83,14 +86,15 @@ namespace _06182024
                         }
                         else if (isbusy == 0)
                         {
-                            btn.BackColor = SystemColors.ControlDark;
+                            btn.BackColor = SystemColors.ScrollBar;
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Connection error with database", ex.Message);
+                txtClear(sender, e);
+                form3.Show();
             }
 
             connection.Close();
@@ -98,13 +102,15 @@ namespace _06182024
 
         private void btnassign_Click(object sender, EventArgs e)
         {
-            TextBox[] textBoxes = { txtfisrtname, txtlastname, txtdocument, txtemail };
+            TextBox[] textBoxes = { txtfisrtname/*, txtlastname, txtdocument, txtemail*/ };
 
             foreach (TextBox textBox in textBoxes)
             {
                 if (string.IsNullOrEmpty(textBox.Text))
                 {
+                    txtClear(sender, e);
                     MessageBox.Show("Please fill alls fields");
+                    
                 }
                 else
                 {
@@ -115,19 +121,13 @@ namespace _06182024
                         string code = ("update airplane set isbusy = 1, firstname='" + txtfisrtname.Text + "', lastname='" + txtlastname.Text + "', documment='" + txtdocument.Text + "', email='" + txtemail.Text + "' where code = '" + btnassign.Tag + "'");
                         SqlCommand command = new SqlCommand(code, connection);
                         command.ExecuteNonQuery();
-                        txtfisrtname.Clear();
-                        txtlastname.Clear();
-                        txtdocument.Clear();
-                        txtemail.Clear();
-                        MessageBox.Show("Assign successful");
+                        txtClear(sender, e);
+                        form2.Show();
                     }
                     catch (Exception ex)
                     {
-                        txtfisrtname.Clear();
-                        txtlastname.Clear();
-                        txtdocument.Clear();
-                        txtemail.Clear();
-                        MessageBox.Show("Error ocurred with database", ex.Message);
+                        txtClear(sender, e);
+                        form3.Show();
                     }
 
                     connection.Close();
@@ -138,12 +138,13 @@ namespace _06182024
 
         private void btnfree_Click(object sender, EventArgs e)
         {
-            TextBox[] textBoxes = { txtfisrtname, txtlastname, txtdocument, txtemail };
+            TextBox[] textBoxes = { txtfisrtname/*, txtlastname, txtdocument, txtemail*/ };
 
             foreach (TextBox textBox in textBoxes)
             {
-                if (string.IsNullOrEmpty(textBox.Text))
+                if (!string.IsNullOrEmpty(textBox.Text))
                 {
+                    txtClear(sender, e);
                     MessageBox.Show("Please fill alls fields");
                 }
                 else
@@ -155,19 +156,13 @@ namespace _06182024
                         string code = ("update airplane set isbusy = 0, firstname='', lastname='', documment='', email='' where code = '" + btnassign.Tag + "'");
                         SqlCommand command = new SqlCommand(code, connection);
                         command.ExecuteNonQuery();
-                        txtfisrtname.Clear();
-                        txtlastname.Clear();
-                        txtdocument.Clear();
-                        txtemail.Clear();
-                        MessageBox.Show("Free successful");
+                        txtClear(sender, e);
+                        form2.Show();
                     }
                     catch (Exception ex)
                     {
-                        txtfisrtname.Clear();
-                        txtlastname.Clear();
-                        txtdocument.Clear();
-                        txtemail.Clear();
-                        MessageBox.Show("Error ocurred with database", ex.Message);
+                        txtClear(sender, e);
+                        form3.Show();
                     }
 
                     connection.Close();
@@ -325,6 +320,14 @@ namespace _06182024
         {
             btnassign.Tag = "co16";
             btnfree.Tag = "co16";
+        }
+
+        private void txtClear(object sender, EventArgs e) 
+        {
+            txtfisrtname.Clear();
+            txtlastname.Clear();
+            txtdocument.Clear();
+            txtemail.Clear();
         }
     }
 }
