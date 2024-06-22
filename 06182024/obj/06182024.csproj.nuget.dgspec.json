@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\soporte MPOS\\Downloads\\Clone\\06182024\\06182024.csproj": {}
+    "C:\\Users\\soporte MPOS\\OneDrive\\Desktop\\Clone\\06182024\\06182024.csproj": {}
   },
   "projects": {
-    "C:\\Users\\soporte MPOS\\Downloads\\Clone\\06182024\\06182024.csproj": {
+    "C:\\Users\\soporte MPOS\\OneDrive\\Desktop\\Clone\\06182024\\06182024.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\soporte MPOS\\Downloads\\Clone\\06182024\\06182024.csproj",
+        "projectUniqueName": "C:\\Users\\soporte MPOS\\OneDrive\\Desktop\\Clone\\06182024\\06182024.csproj",
         "projectName": "06182024",
-        "projectPath": "C:\\Users\\soporte MPOS\\Downloads\\Clone\\06182024\\06182024.csproj",
+        "projectPath": "C:\\Users\\soporte MPOS\\OneDrive\\Desktop\\Clone\\06182024\\06182024.csproj",
         "packagesPath": "C:\\Users\\soporte MPOS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\soporte MPOS\\Downloads\\Clone\\06182024\\obj\\",
+        "outputPath": "C:\\Users\\soporte MPOS\\OneDrive\\Desktop\\Clone\\06182024\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\soporte MPOS\\AppData\\Roaming\\NuGet\\NuGet.Config",

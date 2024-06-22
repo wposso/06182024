@@ -76,7 +76,7 @@
             btnc1.FlatAppearance.BorderColor = Color.Black;
             btnc1.FlatStyle = FlatStyle.Flat;
             btnc1.Font = new Font("Segoe UI Semibold", 8F, FontStyle.Bold);
-            btnc1.Location = new Point(179, 43);
+            btnc1.Location = new Point(1359, 62);
             btnc1.Name = "btnc1";
             btnc1.Size = new Size(56, 49);
             btnc1.TabIndex = 0;
@@ -90,7 +90,7 @@
             btnc2.FlatAppearance.BorderColor = Color.Black;
             btnc2.FlatStyle = FlatStyle.Flat;
             btnc2.Font = new Font("Segoe UI Semibold", 8F, FontStyle.Bold);
-            btnc2.Location = new Point(239, 43);
+            btnc2.Location = new Point(1419, 62);
             btnc2.Name = "btnc2";
             btnc2.Size = new Size(56, 49);
             btnc2.TabIndex = 1;
@@ -104,7 +104,7 @@
             btnc3.FlatAppearance.BorderColor = Color.Black;
             btnc3.FlatStyle = FlatStyle.Flat;
             btnc3.Font = new Font("Segoe UI Semibold", 8F, FontStyle.Bold);
-            btnc3.Location = new Point(179, 95);
+            btnc3.Location = new Point(1359, 114);
             btnc3.Name = "btnc3";
             btnc3.Size = new Size(56, 49);
             btnc3.TabIndex = 2;
@@ -118,7 +118,7 @@
             btnc7.FlatAppearance.BorderColor = Color.Black;
             btnc7.FlatStyle = FlatStyle.Flat;
             btnc7.Font = new Font("Segoe UI Semibold", 8F, FontStyle.Bold);
-            btnc7.Location = new Point(179, 201);
+            btnc7.Location = new Point(1359, 220);
             btnc7.Name = "btnc7";
             btnc7.Size = new Size(56, 49);
             btnc7.TabIndex = 5;
@@ -132,7 +132,7 @@
             btnc6.FlatAppearance.BorderColor = Color.Black;
             btnc6.FlatStyle = FlatStyle.Flat;
             btnc6.Font = new Font("Segoe UI Semibold", 8F, FontStyle.Bold);
-            btnc6.Location = new Point(239, 148);
+            btnc6.Location = new Point(1419, 167);
             btnc6.Name = "btnc6";
             btnc6.Size = new Size(56, 49);
             btnc6.TabIndex = 4;
@@ -146,7 +146,7 @@
             btnc5.FlatAppearance.BorderColor = Color.Black;
             btnc5.FlatStyle = FlatStyle.Flat;
             btnc5.Font = new Font("Segoe UI Semibold", 8F, FontStyle.Bold);
-            btnc5.Location = new Point(179, 148);
+            btnc5.Location = new Point(1359, 167);
             btnc5.Name = "btnc5";
             btnc5.Size = new Size(56, 49);
             btnc5.TabIndex = 3;
@@ -160,7 +160,7 @@
             btnc8.FlatAppearance.BorderColor = Color.Black;
             btnc8.FlatStyle = FlatStyle.Flat;
             btnc8.Font = new Font("Segoe UI Semibold", 8F, FontStyle.Bold);
-            btnc8.Location = new Point(239, 201);
+            btnc8.Location = new Point(1419, 220);
             btnc8.Name = "btnc8";
             btnc8.Size = new Size(56, 49);
             btnc8.TabIndex = 7;
@@ -174,7 +174,7 @@
             btnc4.FlatAppearance.BorderColor = Color.Black;
             btnc4.FlatStyle = FlatStyle.Flat;
             btnc4.Font = new Font("Segoe UI Semibold", 8F, FontStyle.Bold);
-            btnc4.Location = new Point(239, 95);
+            btnc4.Location = new Point(1419, 114);
             btnc4.Name = "btnc4";
             btnc4.Size = new Size(56, 49);
             btnc4.TabIndex = 6;
@@ -185,7 +185,7 @@
             // txtfisrtname
             // 
             txtfisrtname.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtfisrtname.Location = new Point(187, 363);
+            txtfisrtname.Location = new Point(344, 189);
             txtfisrtname.MaxLength = 20;
             txtfisrtname.Name = "txtfisrtname";
             txtfisrtname.Size = new Size(236, 34);
@@ -195,7 +195,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semilight", 7.8F);
-            label1.Location = new Point(187, 343);
+            label1.Location = new Point(344, 169);
             label1.Name = "label1";
             label1.Size = new Size(66, 17);
             label1.TabIndex = 9;
@@ -204,7 +204,7 @@
             // btnassign
             // 
             btnassign.Cursor = Cursors.Hand;
-            btnassign.Location = new Point(71, 705);
+            btnassign.Location = new Point(228, 531);
             btnassign.Name = "btnassign";
             btnassign.Size = new Size(220, 41);
             btnassign.TabIndex = 10;
@@ -215,7 +215,7 @@
             // btnfree
             // 
             btnfree.Cursor = Cursors.Hand;
-            btnfree.Location = new Point(309, 705);
+            btnfree.Location = new Point(466, 531);
             btnfree.Name = "btnfree";
             btnfree.Size = new Size(224, 41);
             btnfree.TabIndex = 11;
@@ -226,7 +226,7 @@
             // txtlastname
             // 
             txtlastname.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtlastname.Location = new Point(187, 423);
+            txtlastname.Location = new Point(344, 249);
             txtlastname.MaxLength = 20;
             txtlastname.Name = "txtlastname";
             txtlastname.Size = new Size(236, 34);
@@ -236,7 +236,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semilight", 7.8F);
-            label2.Location = new Point(187, 403);
+            label2.Location = new Point(344, 229);
             label2.Name = "label2";
             label2.Size = new Size(66, 17);
             label2.TabIndex = 13;
@@ -246,7 +246,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semilight", 7.8F);
-            label3.Location = new Point(187, 463);
+            label3.Location = new Point(344, 289);
             label3.Name = "label3";
             label3.Size = new Size(66, 17);
             label3.TabIndex = 15;
@@ -255,7 +255,7 @@
             // txtdocument
             // 
             txtdocument.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtdocument.Location = new Point(187, 483);
+            txtdocument.Location = new Point(344, 309);
             txtdocument.MaxLength = 10;
             txtdocument.Name = "txtdocument";
             txtdocument.Size = new Size(236, 34);
@@ -265,7 +265,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semilight", 7.8F);
-            label4.Location = new Point(187, 524);
+            label4.Location = new Point(344, 350);
             label4.Name = "label4";
             label4.Size = new Size(39, 17);
             label4.TabIndex = 17;
@@ -274,7 +274,7 @@
             // txtemail
             // 
             txtemail.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtemail.Location = new Point(187, 544);
+            txtemail.Location = new Point(344, 370);
             txtemail.MaxLength = 40;
             txtemail.Name = "txtemail";
             txtemail.Size = new Size(236, 34);
@@ -289,7 +289,7 @@
             panel1.Controls.Add(btnavailable);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(btnna);
-            panel1.Location = new Point(87, 276);
+            panel1.Location = new Point(1098, 874);
             panel1.Name = "panel1";
             panel1.Size = new Size(429, 51);
             panel1.TabIndex = 18;
@@ -354,7 +354,7 @@
             btnc16.FlatAppearance.BorderColor = Color.Black;
             btnc16.FlatStyle = FlatStyle.Flat;
             btnc16.Font = new Font("Segoe UI Semibold", 8F, FontStyle.Bold);
-            btnc16.Location = new Point(389, 201);
+            btnc16.Location = new Point(1419, 454);
             btnc16.Name = "btnc16";
             btnc16.Size = new Size(56, 49);
             btnc16.TabIndex = 26;
@@ -368,7 +368,7 @@
             btnc12.FlatAppearance.BorderColor = Color.Black;
             btnc12.FlatStyle = FlatStyle.Flat;
             btnc12.Font = new Font("Segoe UI Semibold", 8F, FontStyle.Bold);
-            btnc12.Location = new Point(389, 95);
+            btnc12.Location = new Point(1419, 348);
             btnc12.Name = "btnc12";
             btnc12.Size = new Size(56, 49);
             btnc12.TabIndex = 25;
@@ -382,7 +382,7 @@
             btnc15.FlatAppearance.BorderColor = Color.Black;
             btnc15.FlatStyle = FlatStyle.Flat;
             btnc15.Font = new Font("Segoe UI Semibold", 8F, FontStyle.Bold);
-            btnc15.Location = new Point(329, 201);
+            btnc15.Location = new Point(1359, 454);
             btnc15.Name = "btnc15";
             btnc15.Size = new Size(56, 49);
             btnc15.TabIndex = 24;
@@ -396,7 +396,7 @@
             btnc14.FlatAppearance.BorderColor = Color.Black;
             btnc14.FlatStyle = FlatStyle.Flat;
             btnc14.Font = new Font("Segoe UI Semibold", 8F, FontStyle.Bold);
-            btnc14.Location = new Point(389, 148);
+            btnc14.Location = new Point(1419, 401);
             btnc14.Name = "btnc14";
             btnc14.Size = new Size(56, 49);
             btnc14.TabIndex = 23;
@@ -410,7 +410,7 @@
             btnc13.FlatAppearance.BorderColor = Color.Black;
             btnc13.FlatStyle = FlatStyle.Flat;
             btnc13.Font = new Font("Segoe UI Semibold", 8F, FontStyle.Bold);
-            btnc13.Location = new Point(329, 148);
+            btnc13.Location = new Point(1359, 401);
             btnc13.Name = "btnc13";
             btnc13.Size = new Size(56, 49);
             btnc13.TabIndex = 22;
@@ -424,7 +424,7 @@
             btnc11.FlatAppearance.BorderColor = Color.Black;
             btnc11.FlatStyle = FlatStyle.Flat;
             btnc11.Font = new Font("Segoe UI Semibold", 8F, FontStyle.Bold);
-            btnc11.Location = new Point(329, 95);
+            btnc11.Location = new Point(1359, 348);
             btnc11.Name = "btnc11";
             btnc11.Size = new Size(56, 49);
             btnc11.TabIndex = 21;
@@ -438,7 +438,7 @@
             btnc10.FlatAppearance.BorderColor = Color.Black;
             btnc10.FlatStyle = FlatStyle.Flat;
             btnc10.Font = new Font("Segoe UI Semibold", 8F, FontStyle.Bold);
-            btnc10.Location = new Point(389, 43);
+            btnc10.Location = new Point(1419, 296);
             btnc10.Name = "btnc10";
             btnc10.Size = new Size(56, 49);
             btnc10.TabIndex = 20;
@@ -452,7 +452,7 @@
             btnc9.FlatAppearance.BorderColor = Color.Black;
             btnc9.FlatStyle = FlatStyle.Flat;
             btnc9.Font = new Font("Segoe UI Semibold", 8F, FontStyle.Bold);
-            btnc9.Location = new Point(329, 43);
+            btnc9.Location = new Point(1359, 296);
             btnc9.Name = "btnc9";
             btnc9.Size = new Size(56, 49);
             btnc9.TabIndex = 19;
@@ -465,62 +465,58 @@
             btnpanel1.BackColor = Color.White;
             btnpanel1.Cursor = Cursors.Hand;
             btnpanel1.Font = new Font("Segoe UI Semilight", 8F);
-            btnpanel1.Location = new Point(10, 8);
+            btnpanel1.Location = new Point(16, 12);
             btnpanel1.Name = "btnpanel1";
-            btnpanel1.Size = new Size(118, 24);
+            btnpanel1.Size = new Size(178, 31);
             btnpanel1.TabIndex = 28;
             btnpanel1.TextAlign = ContentAlignment.TopCenter;
             btnpanel1.UseVisualStyleBackColor = false;
-            btnpanel1.Visible = false;
             // 
             // btnpanel2
             // 
             btnpanel2.BackColor = Color.White;
             btnpanel2.Cursor = Cursors.Hand;
             btnpanel2.Font = new Font("Segoe UI Semilight", 8F);
-            btnpanel2.Location = new Point(10, 31);
+            btnpanel2.Location = new Point(16, 40);
             btnpanel2.Name = "btnpanel2";
-            btnpanel2.Size = new Size(118, 24);
+            btnpanel2.Size = new Size(178, 31);
             btnpanel2.TabIndex = 29;
             btnpanel2.TextAlign = ContentAlignment.TopCenter;
             btnpanel2.UseVisualStyleBackColor = false;
-            btnpanel2.Visible = false;
             // 
             // btnpanel3
             // 
             btnpanel3.BackColor = Color.White;
             btnpanel3.Cursor = Cursors.Hand;
             btnpanel3.Font = new Font("Segoe UI Semilight", 8F);
-            btnpanel3.Location = new Point(10, 54);
+            btnpanel3.Location = new Point(16, 66);
             btnpanel3.Name = "btnpanel3";
-            btnpanel3.Size = new Size(118, 24);
+            btnpanel3.Size = new Size(178, 31);
             btnpanel3.TabIndex = 30;
             btnpanel3.TextAlign = ContentAlignment.TopCenter;
             btnpanel3.UseVisualStyleBackColor = false;
-            btnpanel3.Visible = false;
             // 
             // btnpanel4
             // 
             btnpanel4.BackColor = Color.White;
             btnpanel4.Cursor = Cursors.Hand;
             btnpanel4.Font = new Font("Segoe UI Semilight", 8F);
-            btnpanel4.Location = new Point(10, 77);
+            btnpanel4.Location = new Point(16, 93);
             btnpanel4.Name = "btnpanel4";
-            btnpanel4.Size = new Size(118, 24);
+            btnpanel4.Size = new Size(178, 31);
             btnpanel4.TabIndex = 31;
             btnpanel4.TextAlign = ContentAlignment.TopCenter;
             btnpanel4.UseVisualStyleBackColor = false;
-            btnpanel4.Visible = false;
             // 
             // pnlinfo
             // 
             pnlinfo.Controls.Add(btnpanel4);
-            pnlinfo.Controls.Add(btnpanel3);
-            pnlinfo.Controls.Add(btnpanel2);
             pnlinfo.Controls.Add(btnpanel1);
-            pnlinfo.Location = new Point(35, 95);
+            pnlinfo.Controls.Add(btnpanel2);
+            pnlinfo.Controls.Add(btnpanel3);
+            pnlinfo.Location = new Point(1142, 62);
             pnlinfo.Name = "pnlinfo";
-            pnlinfo.Size = new Size(138, 109);
+            pnlinfo.Size = new Size(211, 138);
             pnlinfo.TabIndex = 32;
             pnlinfo.Visible = false;
             // 
@@ -528,7 +524,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(606, 758);
+            ClientSize = new Size(1557, 937);
             Controls.Add(pnlinfo);
             Controls.Add(btnc16);
             Controls.Add(btnc12);

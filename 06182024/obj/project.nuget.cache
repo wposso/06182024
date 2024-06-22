@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8z0faODCoMM=",
+  "dgSpecHash": "voK9usjqKlk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\soporte MPOS\\Downloads\\Clone\\06182024\\06182024.csproj",
+  "projectFilePath": "C:\\Users\\soporte MPOS\\OneDrive\\Desktop\\Clone\\06182024\\06182024.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\soporte MPOS\\.nuget\\packages\\entityframework\\6.5.1\\entityframework.6.5.1.nupkg.sha512",
     "C:\\Users\\soporte MPOS\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

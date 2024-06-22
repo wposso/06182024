@@ -55,8 +55,14 @@ namespace _06182024
             btnc14.Click += new EventHandler(btnSelection);
             btnc15.Click += new EventHandler(btnSelection);
             btnc16.Click += new EventHandler(btnSelection);
+
             btnc1.MouseLeave += new EventHandler(panelLeave);
             btnc1.MouseEnter += new EventHandler(panelEnter);
+            btnc3.MouseEnter += new EventHandler(panelEnter);
+            btnc3.MouseLeave += new EventHandler(panelLeave);
+
+            
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -157,7 +163,7 @@ namespace _06182024
 
         private void btnfree_Click(object sender, EventArgs e)
         {
-            TextBox[] textBoxes = { txtfisrtname/*, txtlastname, txtdocument, txtemail*/ };
+            TextBox[] textBoxes = { txtfisrtname, txtlastname, txtdocument, txtemail };
 
             foreach (TextBox textBox in textBoxes)
             {
@@ -176,6 +182,10 @@ namespace _06182024
                         SqlCommand command = new SqlCommand(code, connection);
                         command.ExecuteNonQuery();
                         txtClear(sender, e);
+                        if (btnc14.ForeColor == Color.White) 
+                        {
+                            btnc14.ForeColor = Color.Black;
+                        }
                         form6.Show();
                     }
                     catch (Exception ex)
@@ -210,12 +220,14 @@ namespace _06182024
 
         private void panelLeave(object sender, EventArgs e)
         {
-            pnlinfo.Visible = true;
-            pnlinfo.Location = new Point(35, 95);
+            pnlinfo.Visible = false;
         }
         private void panelEnter(object sender, EventArgs e)
         {
-            pnlinfo.Visible = false;
+            loadPanelInfo(sender, e);
+            pnlinfo.Visible = true;
+            pnlinfo.Location = new Point(1142, 62);
+
         }
         private void btnc1_Click(object sender, EventArgs e)
         {
@@ -225,7 +237,7 @@ namespace _06182024
 
         private void btnc2_Click(object sender, EventArgs e)
         {
-
+            
             btnassign.Tag = "co02";
             btnfree.Tag = "co02";
         }
@@ -290,6 +302,33 @@ namespace _06182024
             SqlCommand command = new SqlCommand(code, connection);
             int count = (int)command.ExecuteScalar();
             btnbusy.Text = count.ToString();
+            connection.Close();
+        }
+
+        private void loadPanelInfo(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            string buttoncode = button.Text;
+
+            connection.Open();
+            string code = ("select firstname,lastname,documment,email from airplane where code=@code");
+            SqlCommand command = new SqlCommand(code, connection);
+            command.Parameters.AddWithValue("code", buttoncode);
+            SqlDataReader reader = command.ExecuteReader();
+
+            if (reader.Read()) 
+            {
+                string firstname = reader["firstname"].ToString();
+                string lastname = reader["lastname"].ToString();
+                string documment = reader["documment"].ToString();
+                string email = reader["email"].ToString();
+
+                btnpanel1.Text = firstname;
+                btnpanel2.Text = lastname;
+                btnpanel3.Text = documment;
+                btnpanel4.Text = email;
+            }
+            reader.Close();
             connection.Close();
         }
         private void totalCount(object sender, EventArgs e)
@@ -358,9 +397,5 @@ namespace _06182024
             txtemail.Clear();
         }
 
-        private void btndemo_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Button demo");
-        }
     }
 }
