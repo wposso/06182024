@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             btnc1 = new Button();
             btnc2 = new Button();
             btnc3 = new Button();
@@ -66,6 +67,8 @@
             btnpanel3 = new Button();
             btnpanel4 = new Button();
             pnlinfo = new Panel();
+            label8 = new Label();
+            button1 = new Button();
             panel1.SuspendLayout();
             pnlinfo.SuspendLayout();
             SuspendLayout();
@@ -465,7 +468,7 @@
             btnpanel1.BackColor = Color.White;
             btnpanel1.Cursor = Cursors.Hand;
             btnpanel1.Font = new Font("Segoe UI Semilight", 8F);
-            btnpanel1.Location = new Point(16, 12);
+            btnpanel1.Location = new Point(16, 38);
             btnpanel1.Name = "btnpanel1";
             btnpanel1.Size = new Size(178, 31);
             btnpanel1.TabIndex = 28;
@@ -477,7 +480,7 @@
             btnpanel2.BackColor = Color.White;
             btnpanel2.Cursor = Cursors.Hand;
             btnpanel2.Font = new Font("Segoe UI Semilight", 8F);
-            btnpanel2.Location = new Point(16, 40);
+            btnpanel2.Location = new Point(16, 75);
             btnpanel2.Name = "btnpanel2";
             btnpanel2.Size = new Size(178, 31);
             btnpanel2.TabIndex = 29;
@@ -489,7 +492,7 @@
             btnpanel3.BackColor = Color.White;
             btnpanel3.Cursor = Cursors.Hand;
             btnpanel3.Font = new Font("Segoe UI Semilight", 8F);
-            btnpanel3.Location = new Point(16, 66);
+            btnpanel3.Location = new Point(16, 112);
             btnpanel3.Name = "btnpanel3";
             btnpanel3.Size = new Size(178, 31);
             btnpanel3.TabIndex = 30;
@@ -501,7 +504,7 @@
             btnpanel4.BackColor = Color.White;
             btnpanel4.Cursor = Cursors.Hand;
             btnpanel4.Font = new Font("Segoe UI Semilight", 8F);
-            btnpanel4.Location = new Point(16, 93);
+            btnpanel4.Location = new Point(16, 149);
             btnpanel4.Name = "btnpanel4";
             btnpanel4.Size = new Size(178, 31);
             btnpanel4.TabIndex = 31;
@@ -510,21 +513,50 @@
             // 
             // pnlinfo
             // 
+            pnlinfo.Controls.Add(label8);
             pnlinfo.Controls.Add(btnpanel4);
             pnlinfo.Controls.Add(btnpanel1);
             pnlinfo.Controls.Add(btnpanel2);
             pnlinfo.Controls.Add(btnpanel3);
             pnlinfo.Location = new Point(1142, 62);
             pnlinfo.Name = "pnlinfo";
-            pnlinfo.Size = new Size(211, 138);
+            pnlinfo.Size = new Size(211, 207);
             pnlinfo.TabIndex = 32;
             pnlinfo.Visible = false;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.Location = new Point(70, 9);
+            label8.Name = "label8";
+            label8.Size = new Size(71, 20);
+            label8.TabIndex = 33;
+            label8.Text = "Assign to";
+            // 
+            // button1
+            // 
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.BackgroundImageLayout = ImageLayout.Stretch;
+            button1.Cursor = Cursors.Hand;
+            button1.FlatAppearance.BorderColor = SystemColors.Control;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = SystemColors.Control;
+            button1.FlatAppearance.MouseOverBackColor = SystemColors.Control;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Location = new Point(968, 362);
+            button1.Name = "button1";
+            button1.Size = new Size(186, 88);
+            button1.TabIndex = 33;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1557, 937);
+            Controls.Add(button1);
             Controls.Add(pnlinfo);
             Controls.Add(btnc16);
             Controls.Add(btnc12);
@@ -559,6 +591,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             pnlinfo.ResumeLayout(false);
+            pnlinfo.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -603,5 +636,7 @@
         private Button btnpanel3;
         private Button btnpanel4;
         private Panel pnlinfo;
+        private Label label8;
+        private Button button1;
     }
 }

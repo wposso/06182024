@@ -6,7 +6,7 @@ namespace _06182024
 {
     public partial class Form1 : Form
     {
-        SqlConnection connection = new SqlConnection("server=192.168.1.184; database=mydatabase; integrated security=true");
+        SqlConnection connection = new SqlConnection("server=adminsystem; database=mydatabase; integrated security=true");
 
         Form2 form2 = new Form2();
         Form3 form3 = new Form3();
@@ -61,8 +61,8 @@ namespace _06182024
             btnc3.MouseEnter += new EventHandler(panelEnter);
             btnc3.MouseLeave += new EventHandler(panelLeave);
 
-            
-            
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -117,12 +117,12 @@ namespace _06182024
 
         private void btnassign_Click(object sender, EventArgs e)
         {
-            if (btnassign.Tag == null) 
+            if (btnassign.Tag == null)
             {
                 txtClear(sender, e);
                 form5.Show();
             }
-            else 
+            else
             {
                 TextBox[] textBoxes = { txtfisrtname, txtlastname, txtdocument, txtemail };
 
@@ -157,12 +157,15 @@ namespace _06182024
                 }
             }
 
-            
+
 
         }
 
         private void btnfree_Click(object sender, EventArgs e)
         {
+            Button button = sender as Button;
+            string buttonCode = button.Text;
+
             TextBox[] textBoxes = { txtfisrtname, txtlastname, txtdocument, txtemail };
 
             foreach (TextBox textBox in textBoxes)
@@ -182,10 +185,10 @@ namespace _06182024
                         SqlCommand command = new SqlCommand(code, connection);
                         command.ExecuteNonQuery();
                         txtClear(sender, e);
-                        if (btnc14.ForeColor == Color.White) 
-                        {
-                            btnc14.ForeColor = Color.Black;
-                        }
+                        //if ( == Color.White) 
+                        //{
+                        //    btnc14.ForeColor = Color.Black;
+                        //}
                         form6.Show();
                     }
                     catch (Exception ex)
@@ -237,7 +240,7 @@ namespace _06182024
 
         private void btnc2_Click(object sender, EventArgs e)
         {
-            
+
             btnassign.Tag = "co02";
             btnfree.Tag = "co02";
         }
@@ -316,7 +319,7 @@ namespace _06182024
             command.Parameters.AddWithValue("code", buttoncode);
             SqlDataReader reader = command.ExecuteReader();
 
-            if (reader.Read()) 
+            if (reader.Read())
             {
                 string firstname = reader["firstname"].ToString();
                 string lastname = reader["lastname"].ToString();
@@ -397,5 +400,9 @@ namespace _06182024
             txtemail.Clear();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Has presionado el boton");
+        }
     }
 }
